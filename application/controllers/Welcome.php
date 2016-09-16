@@ -29,5 +29,23 @@ class Welcome extends Application
 
 		$this->render();
 	}
+	
+	public function random()
+	{
+		// this is the view we want shown
+		$this->data['pagebody'] = 'homepage';
+
+		// build the list of authors, to pass on to our view
+		$source = $this->quotes->all();
+		$authors = array ();
+		
+		$temp = $source[rand(0, count($source) -1)];
+		
+		array_push ($authors, array ('who' => $temp['who'], 'mug' => $temp['mug'], 'href' => $temp['where'], 'what' => $temp['what']));
+		
+		$this->data['authors'] = $authors;
+
+		$this->render();
+	}
 
 }
