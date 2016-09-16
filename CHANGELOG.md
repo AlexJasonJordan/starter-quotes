@@ -5,3 +5,4 @@ Alex Young    : Second Mate
 
 ## Change Log
 v1.0 : Added change log. 
+v1.1 : Added quotes on mouse over icon. 
